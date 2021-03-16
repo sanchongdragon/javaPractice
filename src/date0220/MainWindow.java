@@ -42,7 +42,7 @@ public class MainWindow {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 819, 523);
+		frame.setBounds(100, 100, 258, 288);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JMenuBar menuBar = new JMenuBar();
@@ -52,6 +52,12 @@ public class MainWindow {
 		menuBar.add(mnNewMenu);
 		
 		JMenuItem bmiBtn = new JMenuItem("BMI計算器");
+		bmiBtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				BmiAppWindow bmi = new BmiAppWindow();
+				bmi.main(null);
+			}
+		});
 		mnNewMenu.add(bmiBtn);
 		
 		JMenuItem calcBtn = new JMenuItem("計算機");

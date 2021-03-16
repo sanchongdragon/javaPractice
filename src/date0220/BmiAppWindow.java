@@ -52,7 +52,7 @@ public class BmiAppWindow {
 		frmBmi = new JFrame();
 		frmBmi.setTitle("BMI計算器");
 		frmBmi.setBounds(100, 100, 277, 341);
-		frmBmi.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmBmi.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frmBmi.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
