@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.BorderLayout;
+import java.awt.Color;
+
 import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 import java.awt.GridLayout;
@@ -14,6 +16,8 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.MouseMotionAdapter;
+import java.awt.event.MouseEvent;
 
 public class BmiAppWindow {
 
@@ -96,18 +100,30 @@ public class BmiAppWindow {
 					float resultAns = (float)(weightNum / Math.pow(heightNum,2));
 					result.setText(String.valueOf(resultAns));
 					
-					if(resultAns < 18.5)
+					if(resultAns < 18.5) {
 						resultAdvice.setText("體重過輕");
-					else if(resultAns < 25)
+						resultAdvice.setBackground(Color.GREEN);
+					}
+					else if(resultAns < 25) {
 						resultAdvice.setText("正常體重");
-					else if(resultAns < 30)
+						resultAdvice.setBackground(Color.GREEN);
+					}
+					else if(resultAns < 30) {
 						resultAdvice.setText("體重過重");
-					else if(resultAns < 35)
+						resultAdvice.setBackground(Color.YELLOW);
+					}
+					else if(resultAns < 35) {
 						resultAdvice.setText("肥胖1級");
-					else if(resultAns < 40)
+						resultAdvice.setBackground(Color.PINK);
+					}
+					else if(resultAns < 40) {
 						resultAdvice.setText("肥胖2級");
-					else
+						resultAdvice.setBackground(Color.ORANGE);
+					}
+					else {
 						resultAdvice.setText("肥胖3級");
+						resultAdvice.setBackground(Color.RED);
+					}
 					
 					
 				} catch (NumberFormatException e1) {
