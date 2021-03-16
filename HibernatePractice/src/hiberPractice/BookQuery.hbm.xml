@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="hiberPractice.HiberBook" table="bookTable">
+
+		<id name="id" column="id" type="java.lang.Integer" length="32">
+			<generator class="increment">
+			</generator>
+		</id>
+
+		<property name="enName" type="java.lang.String" update="true"
+			insert="true" column="enName" length="50" not-null="false" />
+
+		<property name="chName" type="java.lang.String" update="true"
+			insert="true" column="chName" not-null="false" />
+
+	</class>
+
+</hibernate-mapping>
